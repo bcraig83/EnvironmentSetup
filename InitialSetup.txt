@@ -7,23 +7,40 @@ Disable-UAC
 ###############################################
 # Disable defrag (no need when having an SSD)	#
 ###############################################
-
 Get-ScheduledTask -TaskName *defrag* | Disable-ScheduledTask
 
-
-Disable-BingSearch
-Disable-GameBarTips
-
-Enable-MicrosoftUpdate
-
+###############################################
+# Set Taskbar and Explorer preferences	#
+###############################################
 Set-TaskbarOptions -Lock -Dock Left -Combine Always -AlwaysShowIconsOn
 Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowProtectedOSFiles -EnableShowFileExtensions -EnableShowFullPathInTitleBar -EnableOpenFileExplorerToQuickAccess -EnableShowRecentFilesInQuickAccess -EnableShowFrequentFoldersInQuickAccess
 
 ###########################################
 # Update Windows and reboot if necessary	#
 ###########################################
-
 Install-WindowsUpdate -AcceptEula -GetUpdatesFromMS
 if (Test-PendingReboot) { Invoke-Reboot }
 
+###########################################
+# Set Windows power options               #
+###########################################
+Write-BoxstarterMessage "Setting Standby Timeout to Never"
+powercfg -change -standby-timeout-ac 0
+powercfg -change -standby-timeout-dc 0
+
+Write-BoxstarterMessage "Setting Monitor Timeout to 20 minutes"
+powercfg -change -monitor-timeout-ac 20
+powercfg -change -monitor-timeout-dc 20
+
+Write-BoxstarterMessage "Setting Disk Timeout to Never"
+powercfg -change -disk-timeout-ac 0
+powercfg -change -disk-timeout-dc 0
+
+Write-BoxstarterMessage "Turning off Windows Hibernation"
+powercfg -h off
+
 Disable-MicrosoftUpdate
+Disable-InternetExplorerESC
+Disable-BingSearch
+Disable-GameBarTips
+Disable-PSRemoting
