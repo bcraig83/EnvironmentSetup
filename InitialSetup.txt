@@ -8,12 +8,6 @@ Set-ExecutionPolicy Unrestricted
 Disable-UAC
 
 ###############################################
-# Disable defrag (no need when having an SSD)	#
-###############################################
-Write-BoxstarterMessage "Disable defrag"
-Get-ScheduledTask -TaskName *defrag* | Disable-ScheduledTask
-
-###############################################
 # Set Taskbar and Explorer preferences	#
 ###############################################
 Write-BoxstarterMessage "Set taskbar and explorer preferences"
