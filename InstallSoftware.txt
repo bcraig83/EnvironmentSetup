@@ -25,3 +25,8 @@ cinst toastify
 cinst viber
 cinst virtualbox
 cinst xmind
+
+#### Schedule updates to applications with chocolatey
+schtasks.exe /create /s "localhost" /ru "System" /tn "Update Chocolatey packages" /tr "%ChocolateyInstall%\bin\cup all" /sc DAILY /st 06:00 /F
+Write-BoxstarterMessage "Set update schedule for apps is finished"
+if (Test-PendingReboot) { Invoke-Reboot }
