@@ -10,8 +10,8 @@ Disable-UAC
 ###############################################
 # Set Taskbar and Explorer preferences	#
 ###############################################
-Write-BoxstarterMessage "Set taskbar preferences"
-Set-TaskbarOptions -Lock -Dock Left -Combine Always -AlwaysShowIconsOn
+#Write-BoxstarterMessage "Set taskbar preferences"
+#Set-TaskbarOptions -Lock -Dock Left -Combine Always -AlwaysShowIconsOn
 
 Write-BoxstarterMessage "Set explorer preferences"
 Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowProtectedOSFiles -EnableShowFileExtensions -EnableShowFullPathInTitleBar -EnableOpenFileExplorerToQuickAccess -EnableShowRecentFilesInQuickAccess -EnableShowFrequentFoldersInQuickAccess
