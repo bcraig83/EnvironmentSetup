@@ -3,20 +3,17 @@ Write-BoxstarterMessage "Beginning initial setup"
 #########################################
 # Set Execution Policy and Disable UAC 	#
 #########################################
-Write-BoxstarterMessage "Set Execution Policy and Disable UAC"
 Set-ExecutionPolicy Unrestricted
 Disable-UAC
 
 ###############################################
 # Disable defrag (no need when having an SSD)	#
 ###############################################
-Write-BoxstarterMessage "Disable defrag"
 Get-ScheduledTask -TaskName *defrag* | Disable-ScheduledTask
 
 ###############################################
 # Set Taskbar and Explorer preferences	#
 ###############################################
-Write-BoxstarterMessage "Set taskbar and explorer preferences"
 Set-TaskbarOptions -Lock -Dock Left -Combine Always -AlwaysShowIconsOn
 Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowProtectedOSFiles -EnableShowFileExtensions -EnableShowFullPathInTitleBar -EnableOpenFileExplorerToQuickAccess -EnableShowRecentFilesInQuickAccess -EnableShowFrequentFoldersInQuickAccess
 
