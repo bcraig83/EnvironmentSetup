@@ -1,0 +1,6 @@
+Move-LibraryDirectory "Desktop" "E:\Desktop"
+Move-LibraryDirectory "Documents" "E:\Documents"
+Move-LibraryDirectory "Downloads" "E:\Downloads"
+Move-LibraryDirectory "Music" "E:\Music"
+Move-LibraryDirectory "Pictures" "E:\Pictures"
+Move-LibraryDirectory "Videos" "E:\Videos"
