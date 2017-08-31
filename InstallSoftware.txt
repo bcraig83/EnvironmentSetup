@@ -33,11 +33,6 @@ schtasks.exe /create /s "localhost" /ru "System" /tn "Update Chocolatey packages
 Write-BoxstarterMessage "Set update schedule for apps is finished"
 if (Test-PendingReboot) { Invoke-Reboot }
 
-# File associations\
-Install-ChocolateyFileAssociation ".txt" "$env:programfiles\Sublime Text 3\sublime_text.exe"
-Install-ChocolateyFileAssociation ".xml" "$env:programfiles\Sublime Text 3\sublime_text.exe"
-Install-ChocolateyFileAssociation ".config" "$env:programfiles\Sublime Text 3\sublime_text.exe"
-
 # Icons in task bar
 Install-ChocolateyPinnedTaskBarItem "$($Boxstarter.programFiles86)\Google\Chrome\Application\chrome.exe"
 
