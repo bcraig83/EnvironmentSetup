@@ -8,6 +8,8 @@ Steps to run from an elevated powershell cmd prompt:
 
 ```cinst boxstarter --version 2.9.26 -y```
 
+You will need to restart a new elevated powershell cmd prompt at this point.
+
 *Possibly setup disks at this point?*
 
 ```Install-BoxstarterPackage -PackageName https://raw.githubusercontent.com/bcraig83/EnvironmentSetup/master/InitialSetup.txt -DisableReboots```
