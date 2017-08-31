@@ -1,3 +1,5 @@
+Write-BoxstarterMessage "Installing essential software"
+
 cinst 7zip
 cinst cmder
 cinst cygwin
@@ -38,3 +40,5 @@ Install-ChocolateyFileAssociation ".config" "$env:programfiles\Sublime Text 3\su
 
 # Icons in task bar
 Install-ChocolateyPinnedTaskBarItem "$($Boxstarter.programFiles86)\Google\Chrome\Application\chrome.exe"
+
+Write-BoxstarterMessage "Software installation complete"
