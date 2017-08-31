@@ -24,8 +24,8 @@ cinst smartgit
 cinst spotify
 cinst sublimetext3
 cinst toastify
-cinst viber
 cinst virtualbox
+cinst wunderlist
 cinst xmind
 
 #### Schedule updates to applications with chocolatey
