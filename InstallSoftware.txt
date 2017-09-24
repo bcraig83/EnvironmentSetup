@@ -10,10 +10,10 @@ Write-BoxstarterMessage "Installing essential software"
 #cinst foxitreader
 #cinst git
 #cinst googlechrome
-cinst googledrive
-cinst gradle
-cinst greenshot
-cinst intellijidea-ultimate
+#cinst googledrive
+#cinst gradle
+#cinst greenshot
+#cinst intellijidea-ultimate
 cinst jdk8
 cinst listary
 cinst microsoft-teams
